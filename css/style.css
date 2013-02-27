@@ -1,0 +1,26 @@
+/* Main App CSS*/
+
+html {
+    margin: 0px;
+}
+
+body {
+    margin: 0px;
+}
+
+#main-content {
+    margin: 5px;
+}
+
+#nav-header {
+    background: url(http://www.wdrt.org/templates/rt_juxta_j15/images/backgrounds/style3/navigation-bg.jpg) 50% 0 repeat-y;
+    width: 100%;
+    height: 60px;
+    margin: 0;
+}
+
+.nav-header-play {
+    height:50px;
+    width:50px;
+    padding:5px;
+}
