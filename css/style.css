@@ -9,14 +9,15 @@ body {
 }
 
 #nav-header {
-    background: url(http://www.wdrt.org/templates/rt_juxta_j15/images/backgrounds/style3/navigation-bg.jpg) 50% 0 repeat-y;
+    background: url(../img/navigation-bg.jpg) 50% 0 repeat-y;
     width: 100%;
     height: 60px;
     margin: 0;
 }
 
 .nav-header-logo {
-    height:60px;
+    height:64px;
+    margin: -2 0 0 -2;
 }
 
 .nav-header-play {
@@ -27,11 +28,10 @@ body {
 
 #main-content {
     margin:0px;
-    height:80%;
-    background: url('/img/main-bg-texture.jpg') repeat-y;
+    height:100%;
+    background-image: url('../img/main-bg-texture.jpg');
 }
 
 #footer {
-    height:100px;
-    overflow: hidden;
+
 }
