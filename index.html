@@ -10,11 +10,11 @@
 <body>
 <div id="nav-header">
     <div style='float: left;'>
-        <img class="nav-header-logo" src="/img/logo_wdrt.png" />
+        <img class="nav-header-logo" src="img/logo_wdrt.png" />
     </div>
     <div class="thumbnail" id="paparazzixxx" style='float:right;'>
         <a class="playback" href="#">
-            <img id="play" class="nav-header-play" src="/img/playbutton.png" />
+            <img id="play" class="nav-header-play" src="img/playbutton.png" />
         </a>
 
         <audio>
@@ -45,7 +45,6 @@
             var song = $(this).next('audio').get(0);
             if (song.paused) {
                 song.play();
-                alert("playing");
             } else {
                 song.pause();
             }
