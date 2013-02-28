@@ -9,36 +9,30 @@
 
 <body>
 <div id="nav-header">
-    <div class="thumbnail" id="paparazzixxx" style='float:left;'>
+    <div style='float: left;'>
+        <img class="nav-header-logo" src="img/logo_wdrt.png" />
+    </div>
+    <div class="thumbnail" id="paparazzixxx" style='float:right;'>
         <a class="playback" href="#">
             <img id="play" class="nav-header-play" src="http://www.iconfloorball.com/images/playbutton.png" />
         </a>
 
-        <audio id="paparazzi">
+        <audio>
             <source src="http://audio.wdrt.org:8000/high" />
             Your browser does not support HTML5 audio.
         </audio>
     </div>
-    <div style="float:left;">
-        <h2>
-            WDRT Driftless Radio
-        </h2>
-    </div>
-
 </div>
 
 <div id="main-content">
-<div id="player" class="cp-player">
-
-
 
 </div>
 
+<div id="footer">
+    <!--<img src="http://www.wdrt.org/templates/rt_juxta_j15/images/backgrounds/style3/header-bg.jpg" />-->
 </div>
 
 </body>
-
-
 </html>
 
 <script type="text/javascript">
@@ -49,10 +43,12 @@
             // This next line will get the audio element
             // that is adjacent to the link that was clicked.
             var song = $(this).next('audio').get(0);
-            if (song.paused)
+            if (song.paused) {
                 song.play();
-            else
+                alert("playing");
+            } else {
                 song.pause();
+            }
         });
     });
 </script>
