@@ -4,7 +4,7 @@
     <link rel="stylesheet" type="text/css" href="css/style.css">
 
     <script type="text/javascript" src="js/jquery-1.9.1.min.js"></script>
-
+    <script type="text/javascript" src="js/app.js"></script>
 </head>
 
 <body>
@@ -16,18 +16,19 @@
         <a class="playback" href="#">
             <img id="play" class="nav-header-play" src="img/playbutton.png" />
         </a>
-
-        <audio>
-            <source src="http://audio.wdrt.org:8000/high" />
-            Your browser does not support HTML5 audio.
-        </audio>
+        <div id="player" style="display:none;">
+        </div>
+        <div id="status" class="stopped">
+        </div>
     </div>
 </div>
 
 <div id="main-content">
     <div id="inner-content">
         <div id="content">
+            <div id="meta-data">
 
+            </div>
         </div>
     </div>
 </div>
@@ -38,20 +39,3 @@
 
 </body>
 </html>
-
-<script type="text/javascript">
-    $(function() {
-        $(".playback").click(function(e) {
-            e.preventDefault();
-
-            // This next line will get the audio element
-            // that is adjacent to the link that was clicked.
-            var song = $(this).next('audio').get(0);
-            if (song.paused) {
-                song.play();
-            } else {
-                $('audio').stop();
-            }
-        });
-    });
-</script>
