@@ -42,7 +42,7 @@ function getTitle() {
             document.getElementById("meta-data").innerHTML=title;
         },
         error: function() {
-            alert( 'Something goes wrong!' );
+            document.getElementById("meta-data").innerHTML="Unable to retrieve info!";
         }
     });
 }
