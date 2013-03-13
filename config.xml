@@ -28,4 +28,6 @@
 <icon src="img/logo_wdrt_114.png" />
 <icon src="img/logo_wdrt_144.png" />
 
+<gap:splash src="splash.png" />
+
 </widget>
