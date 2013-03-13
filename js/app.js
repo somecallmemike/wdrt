@@ -25,8 +25,6 @@ $(function() {
     });
 });
 
-
-
 function getTitle() {
     var randomnumber=Math.floor(Math.random()*110)
     //var URL = "http://audio.wdrt.org:8000/high.xspf"
@@ -38,8 +36,13 @@ function getTitle() {
         jsonpCallback: 'playlist',
         success: function( data ){
             var title = data.playlist.track[0].title;
+            var track = title.match("(.*).by")[1];
+            var artist = title.match("by.(.*).from ")[1];
             var string = title + " " + randomnumber;
-            document.getElementById("meta-data").innerHTML=title;
+            refreshArtwork(artist, track);
+            //document.getElementById("meta-data").innerHTML=title;
+            document.getElementById("artist").innerHTML="Artist: " + artist;
+            document.getElementById("track").innerHTML="Track: " + track;
         },
         error: function() {
             document.getElementById("meta-data").innerHTML="Unable to retrieve info!";
@@ -47,5 +50,31 @@ function getTitle() {
     });
 }
 
+function refreshArtwork(artist, track) {
+    $.ajax({
+        url: 'http://itunes.apple.com/search',
+        data: {
+            term: artist + ' ' + track,
+            media: 'music'
+        },
+        dataType: 'jsonp',
+        success: function(json) {
+            if(json.results.length === 0) {
+                $('img[name="nowplayingimage"]').attr('src', '');
+                return;
+            }
+
+            // trust the first result blindly...
+            var artworkURL = json.results[0].artworkUrl100;
+            $('img[name="nowplayingimage"]').attr('src', artworkURL);
+            $('.artist_name').empty().append(json.results[0].artistName);
+            $('.song_name').empty().append(json.results[0].trackName);
+            $('.album_name').empty().append(json.results[0].collectionName);
+        }
+    });
+}
+
 var first = getTitle();
-var loop = setInterval( function() {getTitle()}, 30000);
+var loop = setInterval( function() {
+    getTitle();
+}, 30000);
