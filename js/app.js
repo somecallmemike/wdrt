@@ -37,7 +37,7 @@ function getTitle() {
         success: function( data ){
             var title = data.playlist.track[0].title;
             var track = title.match("(.*).by")[1];
-            var artist = title.match("by.(.*).from ")[1];
+            var artist = title.match("by.(.*).from.*$")[1];
             var album = title.match("from.(.*)$")[1];
             var string = title + " " + randomnumber;
             refreshArtwork(artist, track);

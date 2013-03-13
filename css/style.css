@@ -2,6 +2,7 @@
 
 html {
     margin: 0px;
+    font-family: "Lucida Sans Unicode", "Lucida Grande", sans-serif;
 }
 
 body {
@@ -44,6 +45,27 @@ body {
     height: 100%;
     margin: 0px 18px 0 18px;
     background: url("../img/surround-texture.png");
+}
+
+#meta-data {
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+    padding-top: 5px;
+}
+
+#cd {
+    width: 238;
+    height: 256;
+    margin-left: auto;
+    margin-right: auto;
+    background: url("../img/cd.png") no-repeat;
+    background-size: contain;
+}
+
+.albumcover {
+    margin: 1px 0px 0px 27px;
+    border: 0px;
 }
 
 #footer {
