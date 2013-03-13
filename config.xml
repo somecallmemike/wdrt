@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<widget xmlns = "http://www.w3.org/ns/widgets"
+        xmlns:gap = "http://phonegap.com/ns/1.0"
+        id        = "com.wdrt.org"
+        versionCode="10"
+        version   = "1.0.0">
+
+<!-- versionCode is optional and Android only -->
+
+<name>WDRT Radio</name>
+
+<description>
+    Driftless Community Radio.
+</description>
+
+<author href="http://wdrt.org" email="support@wdrt.org">
+    Michael Andrews
+</author>
+
+<icon src="img/logo_wdrt_29.png" />
+<icon src="img/logo_wdrt_36.png" />
+<icon src="img/logo_wdrt_48.png" />
+<icon src="img/logo_wdrt_57.png" />
+<icon src="img/logo_wdrt_58.png" />
+<icon src="img/logo_wdrt_64.png" />
+<icon src="img/logo_wdrt_72.png" />
+<icon src="img/logo_wdrt_96.png" />
+<icon src="img/logo_wdrt_114.png" />
+<icon src="img/logo_wdrt_144.png" />
+
+</widget>
