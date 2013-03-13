@@ -38,11 +38,13 @@ function getTitle() {
             var title = data.playlist.track[0].title;
             var track = title.match("(.*).by")[1];
             var artist = title.match("by.(.*).from ")[1];
+            var album = title.match("from.(.*)$")[1];
             var string = title + " " + randomnumber;
             refreshArtwork(artist, track);
             //document.getElementById("meta-data").innerHTML=title;
             document.getElementById("artist").innerHTML="Artist: " + artist;
             document.getElementById("track").innerHTML="Track: " + track;
+            document.getElementById("album").innerHTML="Album: " + album;
         },
         error: function() {
             document.getElementById("meta-data").innerHTML="Unable to retrieve info!";
