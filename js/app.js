@@ -1,11 +1,12 @@
 function Play(){
     document.getElementById("player").innerHTML='playing<audio autoplay><source src="http://audio.wdrt.org:8000/high" ' +
         'type="audio/ogg; codecs=vorbis"><source src="http://audio.wdrt.org:8000/high" ></audio>';
+    $('img[name="play"]').attr('src', 'img/stopbutton.png');
 }
 
 function Stop(){
     document.getElementById("player").innerHTML="stopped";
-
+    $('img[name="play"]').attr('src', 'img/playbutton.png');
 }
 
 $(function() {
